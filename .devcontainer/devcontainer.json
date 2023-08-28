@@ -22,7 +22,7 @@
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
-			"extensions": ["github.copilot", "vscjava.vscode-java-pack"]
+			"extensions": ["github.copilot", "vscjava.vscode-java-pack", "vscjava.vscode-spring-initializr"]
 		}
 	}
 
