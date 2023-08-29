@@ -1,0 +1,7 @@
+Try it in VSCode
+
+1. Create a method using regex to validate passwords
+
+2. validate the date in multiple formats and return values based on the format. Write unit test for it
+
+3. Create a method using regex to read a file and remove numbers and special characters except dots, commas and hyphens present in it
