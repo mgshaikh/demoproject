@@ -8,21 +8,31 @@ import java.util.Map;
 
 public class ArrayUtil {
 
-    /*static method sortArray to take array of numbers as input and return a sorted array in ascending order using bubble sort algorithm.
-    * provide optimized version if array is already sorted*/
-    public static int[] sortArray(int[] arr) {
+ 
+    // This code is an implementation of the bubble sort algorithm which sorts an array of integers in ascending order.
+    // The bubble sort algorithm works by repeatedly swapping adjacent elements of an array if they are in the wrong order.
+    // Each iteration of the outer loop moves the largest element of the unsorted portion of the array to the end of the unsorted portion.
+    // The inner loop swaps any adjacent elements that are in the wrong order.
+    // If no swaps are made in an iteration of the outer loop, the array is sorted and the algorithm terminates.
+    // The algorithm is named because each iteration of the outer loop moves the largest element of the unsorted portion of the array to the end of the unsorted portion.
+    // This is similar to how bubbles rise to the surface of water.
+
+
+
+
+public static int[] sortArray(int[] arr) {
         int temp;
-        boolean isSorted = false;
-        for(int i = 0; i < arr.length; i++) {
+        boolean isSorted = true;
+        for(int index = 0; index < arr.length; index++) {
             isSorted = true;
-            for(int j = 0; j < arr.length-i-1; j++) {
+            for(int j = 0; j < arr.length-index-1; j++) {
                 if(arr[j] > arr[j+1]) {
                     /*Swapping*/
                     temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
-                    isSorted = false;
-                }
+                    isSorted = false; 
+                }             
             }
             if(isSorted) {
                 break;
@@ -51,6 +61,25 @@ public class ArrayUtil {
         return map;
     }
 
+
+    // method to find hether a number is prime or not
+    public static boolean isPrime(int num) {
+        if(num <= 1) {
+            return false;
+        }
+        if(num <= 3) {
+            return true;
+        }
+        if(num % 2 == 0 || num % 3 == 0) {
+            return false;
+        }
+        for(int index = 5; index * index <= num; index += 6) {
+            if(num % index == 0 || num % (index + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 //    main method to test the above
